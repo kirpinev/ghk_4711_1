@@ -24,7 +24,7 @@ interface Product {
   image: string;
 }
 
-const familyProducts: Array<Product> = [
+const familyProducts: Product[] = [
   {
     title: "Все преимущества доступны близким",
     text: "Делитесь бесплатно до конца года",
@@ -32,7 +32,7 @@ const familyProducts: Array<Product> = [
   },
 ];
 
-const products: Array<Product> = [
+const products: Product[] = [
   {
     title: "+1 топовая категория кэшбэка",
     text: "5% на самое популярное",
@@ -110,7 +110,7 @@ export const App = () => {
             Альфа-Смарт
           </Typography.TitleResponsive>
           <Typography.Text view="primary-medium" color="secondary">
-            Первый месяц бесплатно, далее — 399 ₽ в месяц
+            Первый месяц бесплатно, <br /> далее — 399 ₽ в месяц
           </Typography.Text>
         </div>
 
@@ -130,21 +130,20 @@ export const App = () => {
           {products.map((product) => (
             <div className={appSt.product} key={product.title}>
               <div>
-                <Typography.TitleResponsive
+                <Typography.TitleMobile
                   font="system"
                   view="small"
                   weight="bold"
                   tag="h3"
-                  className={appSt.productTitle}
                 >
                   {product.title}
-                </Typography.TitleResponsive>
-
+                </Typography.TitleMobile>
+                <Gap size={8} />
                 <Typography.Text
-                  view="secondary-large"
+                  view="primary-small"
                   tag="p"
                   color="secondary"
-                  className={appSt.productText}
+                  defaultMargins={false}
                 >
                   {product.text}
                 </Typography.Text>
@@ -180,16 +179,15 @@ export const App = () => {
                   view="small"
                   weight="bold"
                   tag="h3"
-                  className={appSt.productTitle}
                 >
                   {product.title}
                 </Typography.TitleResponsive>
-
+                <Gap size={8} />
                 <Typography.Text
-                  view="secondary-large"
+                  view="primary-small"
                   tag="p"
                   color="secondary"
-                  className={appSt.productText}
+                  defaultMargins={false}
                 >
                   {product.text}
                 </Typography.Text>
