@@ -16,7 +16,6 @@ import { LS, LSKeys } from "./ls";
 import { appSt } from "./style.css";
 import { ThxLayout } from "./thx/ThxLayout";
 import { Gap } from "@alfalab/core-components/gap";
-import { useState } from "react";
 
 interface Product {
   title: string;
@@ -81,7 +80,7 @@ const products: Product[] = [
 ];
 
 export const App = () => {
-  const [thxShow, setThx] = useState(LS.getItem(LSKeys.ShowThx, false));
+  const thxShow = LS.getItem(LSKeys.ShowThx, false);
 
   const submit = () => {
     window.gtag("event", "4711_get_sub", {
@@ -89,7 +88,6 @@ export const App = () => {
     });
 
     LS.setItem(LSKeys.ShowThx, true);
-    setThx(true);
   };
 
   if (thxShow) {
@@ -206,7 +204,12 @@ export const App = () => {
       <Gap size={72} />
 
       <div className={appSt.bottomBtn}>
-        <ButtonMobile block view="primary" onClick={submit}>
+        <ButtonMobile
+          block
+          view="primary"
+          href="alfabank:///sdui_screen?screenName=InvestmentLongread&fromCurrent=true&endpoint=v1/invest-main-screen-view/investment-longread/50219%3flocation=AM%26campaignCode=GH"
+          onClick={submit}
+        >
           Подключить
         </ButtonMobile>
       </div>
