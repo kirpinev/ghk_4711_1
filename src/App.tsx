@@ -207,7 +207,7 @@ export const App = () => {
         <ButtonMobile
           block
           view="primary"
-          href="alfabank:///dashboard/alfa_check_cards"
+          href="alfabank:///dashboard/"
           onClick={submit}
         >
           Подключить
