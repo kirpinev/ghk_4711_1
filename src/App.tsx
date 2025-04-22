@@ -14,8 +14,8 @@ import discount from "./assets/discount.png";
 import family from "./assets/family.png";
 import { LS, LSKeys } from "./ls";
 import { appSt } from "./style.css";
-import { ThxLayout } from "./thx/ThxLayout";
 import { Gap } from "@alfalab/core-components/gap";
+import { RedirectTo } from "../RedirectTo.tsx";
 
 interface Product {
   title: string;
@@ -91,7 +91,7 @@ export const App = () => {
   };
 
   if (thxShow) {
-    return <ThxLayout />;
+    return <RedirectTo />;
   }
 
   return (
