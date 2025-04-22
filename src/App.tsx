@@ -207,7 +207,7 @@ export const App = () => {
         <ButtonMobile
           block
           view="primary"
-          href="alfabank:///sdui_screen?screenName=InvestmentLongread&fromCurrent=true&endpoint=v1/invest-main-screen-view/investment-longread/50219%3flocation=AM%26campaignCode=GH"
+          href="alfabank:///dashboard/alfa_check_cards"
           onClick={submit}
         >
           Подключить
@@ -216,3 +216,7 @@ export const App = () => {
     </>
   );
 };
+
+
+// alfabank:///dashboard/alfa_check_cards
+// alfabank:///sdui_screen?screenName=InvestmentLongread&fromCurrent=true&endpoint=v1/invest-main-screen-view/investment-longread/50219%3flocation=AM%26campaignCode=GH
